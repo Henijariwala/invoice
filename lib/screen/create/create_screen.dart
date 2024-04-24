@@ -1,7 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:untitled2/util/color.dart';
 import 'package:untitled2/util/global.dart';
@@ -147,13 +146,16 @@ class _CreateScreenState extends State<CreateScreen> {
                                     String? Pprice = txtPrice.text;
                                     String? qa = txtQuality.text;
                                     String? dis = txtDis.text;
+                                    String? pPath=path;
 
                                     Map product = {
                                       "name": pName,
                                       "price": Pprice,
                                       "Quality": qa,
                                       "discount": dis,
-                                      "total": int.parse(qa)*int.parse(Pprice)
+                                      "total": int.parse(qa)*int.parse(Pprice),
+                                      "ptotal":int.parse(qa)*int.parse(Pprice),
+                                      "path":pPath,
                                     };
                                     productList.add(product);
 
@@ -163,7 +165,7 @@ class _CreateScreenState extends State<CreateScreen> {
                               },
                             style: const ButtonStyle(
                               foregroundColor: MaterialStatePropertyAll(Colors.blue),
-                              backgroundColor: MaterialStatePropertyAll(Colors.blue)
+                              backgroundColor: MaterialStatePropertyAll(Color(0xff112F61))
                             ),
                                 child: const Text("Submit",
                                 style: TextStyle(

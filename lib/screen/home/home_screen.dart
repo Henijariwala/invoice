@@ -144,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             },
                             style: const ButtonStyle(
                                 foregroundColor: MaterialStatePropertyAll(Colors.white),
-                                backgroundColor: MaterialStatePropertyAll(Colors.blue),
+                                backgroundColor: MaterialStatePropertyAll(Color(0xff112F61)),
                             ),
                                 child: const Text("Save"),),
                           )
